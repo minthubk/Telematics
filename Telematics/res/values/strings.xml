@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Telematics</string>
+    <string name="Back">Back</string>
+    <string name="Rec">Rec</string>
+    <string name="Stop">Stop</string>
+    <string name="Empty"></string>
+    <string name="RecordVideo">Record Video</string>
+    <string name="PlayVideo">Play Video</string>
+    <string name="Exit">Exit</string>
+    <string name="Map">Map</string>
+    <string name="VideoQuality">Video Quality</string>
+    <string name="VideoQualityDescribe">Select video quality</string>
+    <string name="VideoTimeInterval">Video Time Interval</string>
+    <string name="VideoTimeDescribe">Select video clip time</string>
+    <string name="recordSubtitle">Record Subtitle</string>
+    <string name="Setting">Setting</string>
+    <string name="GPSAndWifiNotEnable">Fine location of GPS and Wifi not enable. </string>
+    <string name="Open">Open</string>
+    <string name="Play">Play</string>
+    <string name="Subtitle">Subtitle</string>
+
+</resources>
