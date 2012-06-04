@@ -123,6 +123,7 @@ public class RecActivity extends MapActivity implements SurfaceHolder.Callback {
 				mIsMapShow = !mIsMapShow;
 				if (mIsMapShow) {
 					mMapView.setVisibility(View.VISIBLE);
+					enableMap();
 					mRecHandler.enableMap(mHandler);
 				} else {
 					mMapView.setVisibility(View.INVISIBLE);
@@ -190,18 +191,23 @@ public class RecActivity extends MapActivity implements SurfaceHolder.Callback {
 		warnAlertDialog.show();
 	}
 
+	private void enableMap() {
+		GeoPoint geoPoint = mRecHandler.getLocation();
+		mMapController.animateTo(geoPoint);		
+		setMap();
+	}
+	
 	private void setMap() {
 		GeoPoint geoPoint = mRecHandler.getLocation();
-			mMapController.animateTo(geoPoint);
-			// mark map
-			List<Overlay> overlays = mMapView.getOverlays();
-			Drawable mark = getResources().getDrawable(R.drawable.car);
-			mark.setBounds(0, 0, mark.getIntrinsicWidth(),
-					mark.getIntrinsicHeight());
-			LocationOverlay locOverlay = new LocationOverlay(mark);
-			OverlayItem overlayitem = new OverlayItem(geoPoint, "", "");
-			locOverlay.addOverlay(overlayitem);
-			overlays.add(locOverlay);
+		// mark map
+		List<Overlay> overlays = mMapView.getOverlays();
+		Drawable mark = getResources().getDrawable(R.drawable.car);
+		mark.setBounds(0, 0, mark.getIntrinsicWidth(),
+				mark.getIntrinsicHeight());
+		LocationOverlay locOverlay = new LocationOverlay(mark);
+		OverlayItem overlayitem = new OverlayItem(geoPoint, "", "");
+		locOverlay.addOverlay(overlayitem);
+		overlays.add(locOverlay);
 	}
 
 	/**

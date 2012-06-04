@@ -53,6 +53,7 @@ public final class R {
         public static final int Empty=0x7f060004;
         public static final int Exit=0x7f060007;
         public static final int GPSAndWifiNotEnable=0x7f06000f;
+        public static final int MAP_KEY=0x7f060013;
         public static final int Map=0x7f060008;
         public static final int Open=0x7f060010;
         public static final int Play=0x7f060011;
