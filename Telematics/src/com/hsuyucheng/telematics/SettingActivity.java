@@ -6,6 +6,10 @@ import android.preference.PreferenceActivity;
 import android.view.View;
 import android.widget.Button;
 
+/** Setting for Record video
+ * @author hsuyucheng
+ * @version 0.1
+ */
 public class SettingActivity extends PreferenceActivity {
 	private Button backButton;
 	protected void onCreate(Bundle savedInstanceState) {

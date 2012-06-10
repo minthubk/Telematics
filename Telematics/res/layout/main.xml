@@ -39,7 +39,7 @@
             android:id="@+id/playEntry"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="0.54"
+            android:layout_weight="0.55"
             android:text="@string/PlayVideo"
             android:textSize="40dp" />
 

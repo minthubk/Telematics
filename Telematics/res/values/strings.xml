@@ -20,5 +20,7 @@
     <string name="Play">Play</string>
     <string name="Subtitle">Subtitle</string>
     <string name="MAP_KEY">0U6Hud2QaLNPQbI6mgY8nuNBVHBsxy2vgzQ6nVQ</string>
+    <string name="ListEmpty">No items.</string>
+    <string name="reset">Reset</string>
 
 </resources>

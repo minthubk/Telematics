@@ -52,7 +52,9 @@ public class TelematicsActivity extends Activity {
 
 			@Override
 			public void onClick(View v) {
-
+				Intent intent = new Intent();
+				intent.setClass(TelematicsActivity.this, VideoActivity.class);
+				startActivity(intent);				
 			}
 		});
 

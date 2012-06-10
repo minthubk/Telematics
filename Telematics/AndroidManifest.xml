@@ -20,7 +20,7 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name" >
         <activity
-            android:name=".TelematicsActivity"
+            android:name="TelematicsActivity"
             android:label="@string/app_name" android:theme="@android:style/Theme.Black">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,9 +28,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".RecActivity" android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"></activity>
+        <activity android:name="RecActivity" android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"></activity>
         <uses-library android:name="com.google.android.maps" android:required="true"/>
         <activity android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" android:name="SettingActivity"></activity>
+        <activity android:name="VideoActivity"></activity>
     </application>
 
 </manifest>
