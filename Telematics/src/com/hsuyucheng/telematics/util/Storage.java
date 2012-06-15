@@ -14,6 +14,11 @@ public class Storage {
 		}
 	}
 
+	public static boolean isFileExist(String path) {
+		File file = new File(path);
+		return file.exists();
+	}
+	
 	public static String getVideoLocation() {
 		final String FOLDER = "/Telematics/";
 		return Environment.getExternalStorageDirectory().getAbsolutePath()

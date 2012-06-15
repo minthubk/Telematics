@@ -19,8 +19,9 @@
     <string name="Open">Open</string>
     <string name="Play">Play</string>
     <string name="Subtitle">Subtitle</string>
-    <string name="MAP_KEY">0U6Hud2QaLNPQbI6mgY8nuNBVHBsxy2vgzQ6nVQ</string>
+    <string name="MAP_KEY">0U6Hud2QaLNPu4duxnqwzeXilRTJOt_8hX9JcXQ</string>
     <string name="ListEmpty">No items.</string>
     <string name="reset">Reset</string>
+    <string name="pause">Pause</string>
 
 </resources>

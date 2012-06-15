@@ -8,6 +8,10 @@ package com.hsuyucheng.telematics.util;
  */
 public class SubDescriber {
 	public static final int INTERVAL_MILLISECONDS = 5000;
+	public static String getSubType() {
+		return ".sub";
+	}
+
 	private String mSubName = null;
 	
 	public SubDescriber() {
@@ -20,10 +24,6 @@ public class SubDescriber {
 	
 	public void setName(String name) {
 		mSubName = name;
-	}
-	
-	public String getSubType() {
-		return ".sub";
 	}
 	
 	/**

@@ -32,6 +32,7 @@
         <uses-library android:name="com.google.android.maps" android:required="true"/>
         <activity android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" android:name="SettingActivity"></activity>
         <activity android:name="VideoActivity"></activity>
+        <activity android:name="PlayActivity"></activity>
     </application>
 
 </manifest>

@@ -26,13 +26,6 @@
             android:text="@string/Empty"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textSize="40dp" />
-
-        <SeekBar
-            android:id="@+id/videoSeekBar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignTop="@+id/videoTextView"
-            android:layout_centerHorizontal="true" />
     </RelativeLayout>
 
     <LinearLayout
@@ -47,13 +40,13 @@
             android:layout_weight="0.01"
             android:text="@string/Back"
             android:textSize="40dp" />
-
+
         <Button
             android:id="@+id/videoPlayButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="0.01"
-            android:text="@string/Play"
+            android:text="@string/pause"
             android:textSize="40dp" />
 
         <Button

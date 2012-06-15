@@ -18,9 +18,9 @@ import android.widget.Button;
  */
 public class TelematicsActivity extends Activity {
     /** Called when the activity is first created. */
-	private Button recEntry;
-	private Button playEntry;
-	private Button exitEntry;
+	private Button mRecEntry;
+	private Button mVideoEntry;
+	private Button mExitEntry;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -34,11 +34,11 @@ public class TelematicsActivity extends Activity {
 	}
     
 	private void initButton() {
-		recEntry = (Button) findViewById(R.id.recEntry);
-		playEntry = (Button) findViewById(R.id.playEntry);
-		exitEntry = (Button) findViewById(R.id.exitEnrty);
+		mRecEntry = (Button) findViewById(R.id.recEntry);
+		mVideoEntry = (Button) findViewById(R.id.playEntry);
+		mExitEntry = (Button) findViewById(R.id.exitEnrty);
 
-		recEntry.setOnClickListener(new View.OnClickListener() {
+		mRecEntry.setOnClickListener(new View.OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
@@ -48,17 +48,18 @@ public class TelematicsActivity extends Activity {
 			}
 		});
 
-		playEntry.setOnClickListener(new View.OnClickListener() {
+		mVideoEntry.setOnClickListener(new View.OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
 				Intent intent = new Intent();
-				intent.setClass(TelematicsActivity.this, VideoActivity.class);
+				//intent.setClass(TelematicsActivity.this, VideoActivity.class);
+				intent.setClass(TelematicsActivity.this, PlayActivity.class);
 				startActivity(intent);				
 			}
 		});
 
-		exitEntry.setOnClickListener(new View.OnClickListener() {
+		mExitEntry.setOnClickListener(new View.OnClickListener() {
 
 			@Override
 			public void onClick(View v) {

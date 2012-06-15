@@ -8,5 +8,5 @@ import android.media.MediaPlayer;
  * 
  */
 public abstract class PlayerState {
-	abstract public String nextState();
+	abstract public String nextState(PlayVideoHandler handler, MediaPlayer player);
 }

@@ -5,12 +5,12 @@ import com.hsuyucheng.telematics.util.Storage;
 import junit.framework.TestCase;
 
 /**
- * @version 0.1
+ * @version 0.2
  * @author YuCHeng Hsu
  *
  */
 public class StorageTest extends TestCase {
-
+	String mLoc = "/mnt/sdcard/Telematics/";
 	protected void setUp() throws Exception {
 		super.setUp();
 	}
@@ -20,9 +20,8 @@ public class StorageTest extends TestCase {
 	}
 
 	public void testGetVideoLocation() {
-		String kk = "/mnt/sdcard/Telematics/";
-		assertEquals(kk, Storage.getVideoLocation());
-		kk = "/sdcard/Telematics/";
+		assertEquals(mLoc, Storage.getVideoLocation());
+		String kk = "/sdcard/Telematics/";
 		assertNotSame(kk, Storage.getVideoLocation());
 	}
 	
@@ -31,5 +30,13 @@ public class StorageTest extends TestCase {
 		assertTrue(Storage.isExternalStorageExist());
 		// no external storage
 		// assertFalse(Storage.isExternalStorageExist());
+	}
+	
+	public void testIsFileExist() {
+		assertFalse(Storage.isFileExist(""));
+		assertFalse(Storage.isFileExist("/qq"));
+		assertFalse(Storage.isFileExist("qq"));
+		assertTrue(Storage.isFileExist(mLoc));
+		assertTrue(Storage.isFileExist("/mnt/sdcard"));		
 	}
 }

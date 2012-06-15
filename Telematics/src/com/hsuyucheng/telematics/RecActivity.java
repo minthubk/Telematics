@@ -67,6 +67,7 @@ public class RecActivity extends MapActivity implements SurfaceHolder.Callback {
 				mHandler);
 	}
 
+	@SuppressWarnings("deprecation")
 	private void initView() {
 		mSurView = (SurfaceView) findViewById(R.id.recView);
 		// assign Surface instance and assign to SurfaceHolder
