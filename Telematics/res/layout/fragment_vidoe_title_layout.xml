@@ -8,10 +8,13 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal"
     android:layout_width="match_parent" android:layout_height="match_parent">
-
-    <fragment class="com.hsuyucheng.telematics.NewVIdeoListActivity$TitlesFragment"
-            android:id="@+id/titles" android:layout_weight="1"
-            android:layout_width="0px" android:layout_height="match_parent" />
+
+    <fragment
+        android:id="@+id/titles"
+        android:layout_width="0px"
+        android:layout_height="match_parent"
+        android:layout_weight="0.35"
+        class="com.hsuyucheng.telematics.VideoListActivity$TitlesFragment" />
 
     <FrameLayout android:id="@+id/details" android:layout_weight="1"
             android:layout_width="0px" android:layout_height="match_parent" />

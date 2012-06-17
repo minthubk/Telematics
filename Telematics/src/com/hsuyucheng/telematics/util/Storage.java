@@ -6,6 +6,9 @@ import android.os.Environment;
 import android.os.StatFs;
 
 public class Storage {
+	
+	public static String TAG = "Telematics";
+	
 	public static void createFolder() {
 		File Path = new File(getVideoLocation());
 		// make the folder "Telematics" if this folder doesn't exist

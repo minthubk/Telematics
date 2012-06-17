@@ -1,8 +1,13 @@
 package com.hsuyucheng.telematics;
 
+
+import com.hsuyucheng.telematics.util.DeviceInfo;
 import com.hsuyucheng.telematics.util.Storage;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.AlertDialog.Builder;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
@@ -27,10 +32,9 @@ public class TelematicsActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
 		this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
-
 		Storage.createFolder();
-
 		initButton();
+		checkInternet();
 	}
     
 	private void initButton() {
@@ -53,8 +57,7 @@ public class TelematicsActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				Intent intent = new Intent();
-				//intent.setClass(TelematicsActivity.this, VideoActivity.class);
-				intent.setClass(TelematicsActivity.this, PlayActivity.class);
+				intent.setClass(TelematicsActivity.this, VideoListActivity.class);
 				startActivity(intent);				
 			}
 		});
@@ -68,4 +71,19 @@ public class TelematicsActivity extends Activity {
 		});
     }
     
+	private void checkInternet() {
+		if (!DeviceInfo.isWifiEnable(this.getApplicationContext())) {
+			Builder warnAlertDialog = new AlertDialog.Builder(this);
+			warnAlertDialog.setTitle("Warrning");
+			warnAlertDialog.setMessage("No Internet");
+			DialogInterface.OnClickListener OkClick = new DialogInterface.OnClickListener() {
+				public void onClick(DialogInterface dialog, int which) {
+				}
+
+			};
+			warnAlertDialog.setNeutralButton("I got it.", OkClick);
+			warnAlertDialog.show();
+		}
+
+	}
 }

@@ -35,12 +35,10 @@ public class SubCreatorTest extends AndroidTestCase {
 
 	public void testWriteSubtitle() {
 		String pathNull = "/dev/null";
-		String pathNotExist = "/sdcard/TelematicsTest/KK";
 		String message = "test";
 		String message2 = "sadhj 43rg s123 ********";
 		assertEquals(1, mSubCreator.writeSubtitle(message, pathNull));
 		assertEquals(1, mSubCreator.writeSubtitle(message2, pathNull));
-		assertEquals(0, mSubCreator.writeSubtitle(message2, pathNotExist));
 	}
 	
 	public void testStartRecording() {

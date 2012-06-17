@@ -35,7 +35,8 @@ public class PlayActivity extends Activity implements SurfaceHolder.Callback{
 		mTextView = (TextView)findViewById(R.id.videoTextView);
 		initSurface();
 		initButton();
-		mPlayHandler = new PlayVideoHandler("", mHandler);
+		Bundle bundle = this.getIntent().getExtras();
+		mPlayHandler = new PlayVideoHandler(bundle.getString("video"), mHandler);
 	}
 	
 
@@ -76,6 +77,7 @@ public class PlayActivity extends Activity implements SurfaceHolder.Callback{
 			@Override
 			public void onClick(View v) {
 				mPlayHandler.reset();	
+				mPlayButton.setText("Pause");
 			}
 		});
 	}
@@ -108,6 +110,13 @@ public class PlayActivity extends Activity implements SurfaceHolder.Callback{
 			super.handleMessage(msg);
 		}
 	};
+
+	@Override
+	protected void onStop() {
+		// TODO Auto-generated method stub
+		super.onStop();
+		mPlayHandler.releaseResource();
+	}
 
 
 }

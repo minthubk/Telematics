@@ -3,9 +3,6 @@ package com.hsuyucheng.telematics.playing;
 import java.io.IOException;
 import java.util.Timer;
 import java.util.TimerTask;
-
-import com.hsuyucheng.telematics.util.Storage;
-
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Handler;
@@ -25,6 +22,7 @@ import android.view.SurfaceHolder;
  */
 public class PlayVideoHandler {
 	public static final int CHANGE_SUB = 0x11;
+	public static final int RESTATE = 0x12;
 	private Handler mHandler = null;
 	private String mPath;
 	private MediaPlayer mMPlayer = null;
@@ -54,7 +52,7 @@ public class PlayVideoHandler {
 		}
 		
 		mMPlayer.setDisplay(surHolder);
-
+		
 		try {
 			mMPlayer.setDataSource(mPath);
 			mMPlayer.prepare();
@@ -68,11 +66,14 @@ public class PlayVideoHandler {
 			e.printStackTrace();
 		}
 		
+		play();
+	}
+	
+	private void play() {
 		mMPlayer.start();
 		mState = new PlayState();
 		initTimer();
 	}
-	
 	
 	/**
 	 * @param video_position
@@ -82,8 +83,26 @@ public class PlayVideoHandler {
 		return mSub.getSub(mMPlayer.getCurrentPosition());
 	}
 	
+	public MediaPlayer getPlayer() {
+		return mMPlayer;
+	}
+	
 	public void reset() {
-		mMPlayer.seekTo(0);
+		destoryTimer();
+		if (mMPlayer != null) {
+			mMPlayer.stop();
+			try {
+				mMPlayer.prepare();
+			} catch (IllegalStateException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			mMPlayer.seekTo(0);
+			play();
+		}
 	}
 	
 	public String handle() {
@@ -95,15 +114,18 @@ public class PlayVideoHandler {
 		mState = state;
 	}
 	
-	public void releaseResource() {
-		if (mMPlayer != null) {
-			mMPlayer.stop();
-			mMPlayer.release();
-		}
-		
+	private void destoryTimer() {
 		if (mTimer != null) {
 			mTimer.cancel();
 			mTimer = null;
+		}		
+	}
+	
+	public void releaseResource() {
+		destoryTimer();
+		if (mMPlayer != null) {
+			//mMPlayer.stop();
+			mMPlayer.release();
 		}
 	}
 	

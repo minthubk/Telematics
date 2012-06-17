@@ -94,7 +94,7 @@ public class SubCreator {
 		
 		// not assign return value
 		writeSubtitle(mLastSubtitle, Storage.getVideoLocation()
-				+ mSubDescriber.getName() + mSubDescriber.getSubType());
+				+ mSubDescriber.getName() + SubDescriber.getSubType());
 	}
 	
 	/**

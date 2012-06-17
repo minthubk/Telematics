@@ -22,37 +22,36 @@ public final class R {
     }
     public static final class id {
         public static final int details=0x7f070001;
-        public static final int exitEnrty=0x7f070005;
-        public static final int pager=0x7f070015;
-        public static final int playEntry=0x7f070004;
-        public static final int recBackButton=0x7f07000f;
-        public static final int recButton=0x7f070010;
-        public static final int recEntry=0x7f070002;
-        public static final int recMapButton=0x7f070012;
-        public static final int recMapView=0x7f07000c;
-        public static final int recSettingButton=0x7f070011;
-        public static final int recTextView=0x7f07000e;
-        public static final int recView=0x7f07000b;
-        public static final int scrollView1=0x7f07000d;
-        public static final int settingButton=0x7f070013;
-        public static final int text=0x7f070014;
+        public static final int exitEnrty=0x7f070007;
+        public static final int playEntry=0x7f070006;
+        public static final int recBackButton=0x7f070011;
+        public static final int recButton=0x7f070012;
+        public static final int recEntry=0x7f070004;
+        public static final int recMapButton=0x7f070014;
+        public static final int recMapView=0x7f07000e;
+        public static final int recSettingButton=0x7f070013;
+        public static final int recTextView=0x7f070010;
+        public static final int recView=0x7f07000d;
+        public static final int scrollView1=0x7f07000f;
+        public static final int settingButton=0x7f070015;
         public static final int titles=0x7f070000;
-        public static final int uploadEntry=0x7f070003;
-        public static final int videoBackButton=0x7f070008;
-        public static final int videoPlayButton=0x7f070009;
-        public static final int videoResetButton=0x7f07000a;
-        public static final int videoSurView=0x7f070006;
-        public static final int videoTextView=0x7f070007;
+        public static final int uploadEntry=0x7f070005;
+        public static final int videoBackButton=0x7f07000a;
+        public static final int videoPlayButton=0x7f07000b;
+        public static final int videoResetButton=0x7f07000c;
+        public static final int videoSurView=0x7f070008;
+        public static final int videoTextView=0x7f070009;
+        public static final int video_list_icon=0x7f070002;
+        public static final int video_list_text=0x7f070003;
     }
     public static final class layout {
         public static final int fragment_vidoe_title_layout=0x7f030000;
-        public static final int main=0x7f030001;
-        public static final int playing=0x7f030002;
-        public static final int recording=0x7f030003;
-        public static final int setting=0x7f030004;
-        public static final int simple_list_item_checkable_1=0x7f030005;
-        public static final int video_list=0x7f030006;
-        public static final int video_tabs_pager=0x7f030007;
+        public static final int list_video_icon_text=0x7f030001;
+        public static final int main=0x7f030002;
+        public static final int playing=0x7f030003;
+        public static final int recording=0x7f030004;
+        public static final int setting=0x7f030005;
+        public static final int simple_list_item_checkable_1=0x7f030006;
     }
     public static final class string {
         public static final int Back=0x7f060001;

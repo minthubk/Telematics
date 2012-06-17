@@ -3,6 +3,7 @@ package com.hsuyucheng.telematics.util;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.location.LocationManager;
+import android.net.wifi.WifiManager;
 
 /** This class is a tool to check device information.
  * @version 0.1
@@ -26,7 +27,7 @@ public class DeviceInfo {
     
 	public static boolean isWifiOrGPSEnable(Context context) {
 		boolean result = true;
-		LocationManager locManager = (LocationManager) context
+		LocationManager locManager = (LocationManager)context
 				.getSystemService(Context.LOCATION_SERVICE);
 
 		if (!locManager.isProviderEnabled(LocationManager.GPS_PROVIDER)
@@ -36,6 +37,17 @@ public class DeviceInfo {
 		}
 
 		return result;
+	}
+	
+	public static boolean isWifiEnable(Context context) {
+		WifiManager mManager;
+		mManager = (WifiManager)context
+				.getSystemService(Context.WIFI_SERVICE);
+		if (mManager.getWifiState() == WifiManager.WIFI_STATE_ENABLED) {
+			return true;
+		} else {
+			return false;
+		}
 	}
 
 }
